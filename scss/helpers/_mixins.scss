@@ -1,0 +1,24 @@
+@use '../helpers/variables' as *;
+@use '../helpers/colors' as *;
+
+// Normal and disable buttons
+@mixin btn($bgColor:$main_color, $textColor:$text_color, 
+$radius:$br-radius, $font:14px){
+    border: none;
+    font-weight: 700;
+    font-size: $font;
+    border-radius: $radius;
+    background-color: $bgColor;
+    color: $textColor;
+    border: 2px solid $main_color;
+}
+@mixin btnHover($duration:600ms){
+    background: none;
+    cursor: pointer;
+    transition: background-color $duration ease-out;
+}
+
+// Border Colors
+@mixin border($type, $height:2px, $color:$main_color){
+    $type: $height solid $Color;
+}

@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.mainBtn{
+    @include btn;
+    padding: 1.1rem 3rem;
+}
+
+.mainBtn:hover{
+    @include btnHover;
+}
+
+.disabledBtn{
+    @include btn($disable_btnBgColor, $disable_textColor);
+    padding: 12.5px 43.5px;
+    border: none;
+}

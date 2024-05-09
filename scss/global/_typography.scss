@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    color: #FFFFFF;
+}
+body{
+    background-color: $pg_bgColor;
+}
