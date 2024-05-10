@@ -2,20 +2,23 @@
 
 .vendors{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+
+    @include xl{
+        grid-template-columns: repeat(6, 1fr);
+    }
 
     &_card{
-        // padding: 5.31rem;
+        padding: 2rem;
         background-color: #292929;
-        border: solid;
+        // border: solid;
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: .3;
-
+        
         &:hover{
-            opacity: 1;
+            opacity: .3;
             transition: opacity .1s ease-out;
         }
     }

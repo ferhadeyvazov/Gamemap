@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 .main{
     padding: 3rem 0;
 }
@@ -7,7 +9,10 @@
 }
 
 .container{
-    max-width: 1400px;
-    width: 1600px;
+    max-width: 1600px;
+    width: 90%;
     margin-inline: auto;
+    @include md{
+        width: 80%;
+    };
 }
