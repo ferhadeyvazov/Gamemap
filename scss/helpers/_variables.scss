@@ -9,3 +9,10 @@ $fs-xxl: 35px;
 $fs-navlink: 13px;
 
 $br-radius: 54px;
+
+// BREAKPOINTS
+$breakpoints : (
+    'md' : 576px,
+    'lg' : 992px,
+    'xl' : 1200px
+);
