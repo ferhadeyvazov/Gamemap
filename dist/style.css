@@ -40,10 +40,9 @@ body {
 }
 
 .mainBtn {
-  border: none;
   font-weight: 700;
-  font-size: 14px;
   border-radius: 54px;
+  font-size: 14px;
   background-color: #ff4656;
   color: #ffffff;
   border: 2px solid #ff4656;
@@ -57,13 +56,43 @@ body {
 }
 
 .disabledBtn {
-  border: none;
   font-weight: 700;
-  font-size: 14px;
   border-radius: 54px;
+  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.3);
   border: 2px solid #ff4656;
   padding: 12.5px 43.5px;
   border: none;
+}
+
+.viewMoreBtn {
+  font-weight: 700;
+  border-radius: 54px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 2px solid #ff4656;
+  padding: 1.03rem 3.59rem;
+  cursor: pointer;
+  border-radius: 14.75rem;
+  border: none;
+}
+
+.vendors {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+.vendors_card {
+  background-color: #292929;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+}
+.vendors_card:hover {
+  opacity: 1;
+  transition: opacity 0.1s ease-out;
 }/*# sourceMappingURL=style.css.map */

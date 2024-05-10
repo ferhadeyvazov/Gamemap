@@ -4,10 +4,9 @@
 // Normal and disable buttons
 @mixin btn($bgColor:$main_color, $textColor:$text_color, 
 $radius:$br-radius, $font:14px){
-    border: none;
     font-weight: 700;
-    font-size: $font;
     border-radius: $radius;
+    font-size: $font;
     background-color: $bgColor;
     color: $textColor;
     border: 2px solid $main_color;
