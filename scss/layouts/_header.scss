@@ -1,0 +1,124 @@
+@use '../helpers' as *;
+
+.header {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        #menuIcon{
+            background: none;
+            border: none;
+            padding: 5px;
+            i {
+                font-size: 1.6rem;
+                color: #ffffff;
+                cursor: pointer;
+    
+                &:hover {
+                    opacity: .3;
+                    transition: opacity .3 ease-out;
+                }
+    
+    
+                @include md {
+                    display: none;
+                }
+            }
+        }
+        
+        .header_menu {
+            @include md {
+                display: none;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+
+            position: fixed;
+            top: 50px;
+            // right: -100%;
+            right: 0;
+            width: 65%;
+            height: 100vh;
+            padding: 2rem 0;
+            background-color: #ffffff;
+            border-radius: 5px 0 0 5px;
+            transition: right .4s ease-in;
+
+            &--btns {
+                padding: 0 2rem;
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    margin-bottom: 1.2rem;
+
+                    &:hover {
+                        background-color: $pg_bgColor;
+                    }
+
+                    a {
+                        text-transform: capitalize !important;
+                        color: #ffffff !important;
+                    }
+                }
+
+                .signinBtn {
+                    @include btn($pg_bgColor);
+                }
+            }
+
+            @include md {
+                position: sticky;
+                top: 0;
+            }
+
+
+            .nav_link {
+                padding: 0 2rem;
+
+                a {
+                    padding: 1rem 0;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: $fs-navlink;
+                    text-align: center;
+                    color: $nav_textColor;
+
+                    &:hover {
+                        border-bottom: 3px solid $main_color;
+                        color: $main_color;
+                        transition: all .3s ease-out;
+                    }
+                }
+            }
+        }
+
+        .header_btns {
+            border: solid;
+        }
+
+        #search {
+            display: none;
+
+            @include md {
+                display: block;
+            }
+        }
+
+    }
+}
+
+            .openMenu {
+                right: 0 !important;
+                transition: all .3s ease-out;
+            }

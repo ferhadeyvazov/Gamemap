@@ -13,12 +13,20 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a {
   color: #FFFFFF;
 }
 
 body {
   background-color: #232323;
+}
+
+header {
+  background-color: #232323;
+}
+
+nav {
+  background-color: #FFFFFF;
 }
 
 .main {
@@ -30,13 +38,137 @@ body {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1440px;
   width: 95%;
   margin-inline: auto;
 }
 @media (min-width: 576px) {
   .container {
     width: 80%;
+  }
+}
+
+.header {
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container #menuIcon {
+  background: none;
+  border: none;
+  padding: 5px;
+}
+.header .container #menuIcon i {
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header .container #menuIcon i:hover {
+  opacity: 0.3;
+  transition: opacity 0.3 ease-out;
+}
+@media (min-width: 576px) {
+  .header .container #menuIcon i {
+    display: none;
+  }
+}
+.header .container .header_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 65%;
+  height: 100vh;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  transition: right 0.4s ease-in;
+}
+@media (min-width: 576px) {
+  .header .container .header_menu {
+    display: none;
+  }
+}
+.header .container .header_menu--btns {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.header .container .header_menu--btns button {
+  margin-bottom: 1.2rem;
+}
+.header .container .header_menu--btns button:hover {
+  background-color: #232323;
+}
+.header .container .header_menu--btns button a {
+  text-transform: capitalize !important;
+  color: #ffffff !important;
+}
+.header .container .header_menu--btns .signinBtn {
+  font-weight: 700;
+  border-radius: 54px;
+  background-color: #232323;
+  border: 2px solid #ff4656;
+}
+.header .container .header_menu--btns .signinBtn a {
+  color: #ffffff;
+  font-size: 14px;
+}
+@media (min-width: 576px) {
+  .header .container .header_menu {
+    position: sticky;
+    top: 0;
+  }
+}
+.header .container .header_menu .nav_link {
+  padding: 0 2rem;
+}
+.header .container .header_menu .nav_link a {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+.header .container .header_menu .nav_link a:hover {
+  border-bottom: 3px solid #ff4656;
+  color: #ff4656;
+  transition: all 0.3s ease-out;
+}
+.header .container .header_btns {
+  border: solid;
+}
+.header .container #search {
+  display: none;
+}
+@media (min-width: 576px) {
+  .header .container #search {
+    display: block;
+  }
+}
+
+.openMenu {
+  right: 0 !important;
+  transition: all 0.3s ease-out;
+}
+
+.nav {
+  display: none;
+}
+@media (min-width: 576px) {
+  .nav {
+    padding: 0.65rem 0;
   }
 }
 
@@ -47,11 +179,13 @@ body {
 .mainBtn {
   font-weight: 700;
   border-radius: 54px;
-  font-size: 14px;
   background-color: #ff4656;
-  color: #ffffff;
   border: 2px solid #ff4656;
-  padding: 1.1rem 3rem;
+  padding: 0.5rem 1.1rem;
+}
+.mainBtn a {
+  color: #ffffff;
+  font-size: 14px;
 }
 
 .mainBtn:hover {
@@ -63,25 +197,29 @@ body {
 .disabledBtn {
   font-weight: 700;
   border-radius: 54px;
-  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.3);
   border: 2px solid #ff4656;
   padding: 12.5px 43.5px;
   border: none;
+}
+.disabledBtn a {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
 }
 
 .viewMoreBtn {
   font-weight: 700;
   border-radius: 54px;
-  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
   border: 2px solid #ff4656;
   padding: 1.03rem 3.59rem;
   cursor: pointer;
   border-radius: 14.75rem;
   border: none;
+}
+.viewMoreBtn a {
+  color: #ffffff;
+  font-size: 14px;
 }
 
 .logo {

@@ -7,6 +7,7 @@
     <!-- =================REMIX ICON=================== -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/style.css">
+    <script type="module" src="./main.js" defer></script>
     <title>Gamermap</title>
 </head>
 <body>
@@ -15,8 +16,23 @@
         <div class="container">
             <img src="./assets/img/logo.png" alt="" class="logo">
             <input type="search" name="searh" id="search" placeholder="Search Product...">
-            <button>Sign in</button>
-            <button class="mainBtn">Register</button>
+            <!-- <button><a href="/">Sign in</a></button> -->
+            <!-- <button class="mainBtn"><a href="/">Register</a></button> -->
+            <button id="menuIcon"><i class="ri-menu-3-line"></i></button>
+
+            <ul class="header_menu">
+                <li class="nav_link"><a href="/">Home</a></li>
+                <li class="nav_link"><a href="/">All Products</a></li>
+                <li class="nav_link"><a href="/">Specials</a></li>
+                <li class="nav_link"><a href="/">New Products</a></li>
+                <li class="nav_link"><a href="/">Discounted</a></li>
+                <li class="nav_link"><a href="/">Platforms</a></li>
+                <li class="header_menu--btns">
+                    <button class="mainBtn signinBtn"><a href="/">Sign In</a></button>
+                    <button class="mainBtn registerBtn"><a href="/">Register</a></button>
+                </li>                
+            </ul>
+            
         </div>
     </header>
     
@@ -50,12 +66,13 @@
     <!-- ===============COPYRIGHT SECTION=================== -->
     <section class="copyright">
         <div class="container">
-            <p>&copy; 2024 <a href="https://ferhaddev.netlify.app/" class="copyright_link" target="_blank">Ferhad Eyvazov</a></p>
+            <p>&copy; 2024 Created by <a href="https://ferhaddev.netlify.app/" class="copyright_link" target="_blank">Ferhad Eyvazov</a></p>
         </div>
     </section>
 
+
+    <!-- ------------ -->
     <div class="container">
-        <h1>Gamermap</h1>
         <button class="mainBtn">Salam</button>
         <button class="disabledBtn" disabled>Action</button>
         <button class="viewMoreBtn">View more</button>

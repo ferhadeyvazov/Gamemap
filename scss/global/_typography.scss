@@ -14,9 +14,15 @@ img{
     height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, a{
     color: #FFFFFF;
 }
 body{
     background-color: $pg_bgColor;
+}
+header{
+    background-color: $pg_bgColor;
+}
+nav{
+    background-color: #FFFFFF;
 }

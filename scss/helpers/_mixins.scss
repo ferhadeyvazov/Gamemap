@@ -6,10 +6,12 @@
 $radius:$br-radius, $font:14px){
     font-weight: 700;
     border-radius: $radius;
-    font-size: $font;
     background-color: $bgColor;
-    color: $textColor;
     border: 2px solid $main_color;
+    a{
+        color: $textColor;
+        font-size: $font;
+    }
 }
 @mixin btnHover($duration:600ms){
     background: none;

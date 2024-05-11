@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.nav{
+    display: none;
+    @include md{
+        padding: 0.65rem 0;
+    }
+}
