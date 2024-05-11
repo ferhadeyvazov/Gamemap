@@ -31,7 +31,7 @@ body {
 
 .container {
   max-width: 1600px;
-  width: 90%;
+  width: 95%;
   margin-inline: auto;
 }
 @media (min-width: 576px) {
@@ -82,6 +82,10 @@ body {
   cursor: pointer;
   border-radius: 14.75rem;
   border: none;
+}
+
+.logo {
+  max-width: 35%;
 }
 
 .vendors {

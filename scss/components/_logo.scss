@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.logo{
+    max-width: 35%;
+    // @include md{
+    //     max-width: 100%;
+    // }
+}
