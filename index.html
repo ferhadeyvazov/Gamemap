@@ -14,24 +14,31 @@
     <!-- ==================HEADER=================== -->
     <header class="header">
         <div class="container">
-            <img src="./assets/img/logo.png" alt="" class="logo">
-            <input type="search" name="searh" id="search" placeholder="Search Product...">
-            <!-- <button><a href="/">Sign in</a></button> -->
-            <!-- <button class="mainBtn"><a href="/">Register</a></button> -->
+            <a href="/" class="header_logo">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+            </a>
+
+            <nav class="nav_menu" id="nav_menu">
+                <ul class="header_menu">
+                    <li class="nav_link"><a href="/">Home</a></li>
+                    <li class="nav_link"><a href="/">All Products</a></li>
+                    <li class="nav_link"><a href="/">Specials</a></li>
+                    <li class="nav_link"><a href="/">New Products</a></li>
+                    <li class="nav_link"><a href="/">Discounted</a></li>
+                    <li class="nav_link"><a href="/">Platforms</a></li>
+                    <li class="header_menu--btns">
+                        <button class="mainBtn signinBtn"><a href="/">Sign In</a></button>
+                        <button class="mainBtn registerBtn"><a href="/">Register</a></button>
+                    </li>                
+                </ul>
+
+                <div class="nav_close" id="nav_close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </nav>
+
             <button id="menuIcon"><i class="ri-menu-3-line"></i></button>
 
-            <ul class="header_menu">
-                <li class="nav_link"><a href="/">Home</a></li>
-                <li class="nav_link"><a href="/">All Products</a></li>
-                <li class="nav_link"><a href="/">Specials</a></li>
-                <li class="nav_link"><a href="/">New Products</a></li>
-                <li class="nav_link"><a href="/">Discounted</a></li>
-                <li class="nav_link"><a href="/">Platforms</a></li>
-                <li class="header_menu--btns">
-                    <button class="mainBtn signinBtn"><a href="/">Sign In</a></button>
-                    <button class="mainBtn registerBtn"><a href="/">Register</a></button>
-                </li>                
-            </ul>
             
         </div>
     </header>

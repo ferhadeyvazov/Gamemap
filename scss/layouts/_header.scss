@@ -11,29 +11,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        #menuIcon{
-            background: none;
-            border: none;
-            padding: 5px;
-            i {
-                font-size: 1.6rem;
-                color: #ffffff;
-                cursor: pointer;
-    
-                &:hover {
-                    opacity: .3;
-                    transition: opacity .3 ease-out;
-                }
-    
-    
-                @include md {
-                    display: none;
-                }
-            }
-        }
-        
-        .header_menu {
+
+        .nav_menu {
             @include md {
                 display: none;
             }
@@ -41,12 +20,10 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 2rem;
 
-            position: fixed;
-            top: 50px;
-            // right: -100%;
-            right: 0;
+            position: absolute;
+            top: 0px;
+            right: -100%;
             width: 65%;
             height: 100vh;
             padding: 2rem 0;
@@ -54,71 +31,97 @@
             border-radius: 5px 0 0 5px;
             transition: right .4s ease-in;
 
-            &--btns {
-                padding: 0 2rem;
-                display: flex;
-                flex-direction: column;
+            .header_menu {
+                padding: 0 1rem;
 
-                button {
+                .nav_link {
                     margin-bottom: 1.2rem;
 
-                    &:hover {
-                        background-color: $pg_bgColor;
-                    }
-
                     a {
-                        text-transform: capitalize !important;
-                        color: #ffffff !important;
+                        padding: .5rem 0;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: $fs-navlink;
+                        text-align: center;
+                        color: $nav_textColor;
+
+                        &:hover {
+                            border-bottom: 3px solid $main_color;
+                            color: $main_color;
+                            transition: all .3s ease-out;
+                        }
                     }
                 }
 
-                .signinBtn {
-                    @include btn($pg_bgColor);
-                }
-            }
+                &--btns {
+                    margin-top: 2.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
 
-            @include md {
-                position: sticky;
-                top: 0;
-            }
+                    button {
+                        margin-bottom: 1.2rem;
 
+                        &:hover {
+                            background-color: $pg_bgColor;
+                        }
 
-            .nav_link {
-                padding: 0 2rem;
+                        a {
+                            text-transform: capitalize !important;
+                            color: #ffffff !important;
+                        }
+                    }
 
-                a {
-                    padding: 1rem 0;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: $fs-navlink;
-                    text-align: center;
-                    color: $nav_textColor;
-
-                    &:hover {
-                        border-bottom: 3px solid $main_color;
-                        color: $main_color;
-                        transition: all .3s ease-out;
+                    .signinBtn {
+                        @include btn($pg_bgColor);
                     }
                 }
+
             }
+
+            .nav_close {
+                padding: .5rem;
+                font-size: 1.3rem;
+                position: absolute;
+                top: 6px;
+                right: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: .3;
+                    transition: opacity .2 ease-out;
+                }
+
+            }
+
         }
 
-        .header_btns {
-            border: solid;
-        }
+        #menuIcon {
+            background: none;
+            border: none;
+            padding: 5px;
 
-        #search {
-            display: none;
+            i {
+                font-size: 1.6rem;
+                color: #ffffff;
+                cursor: pointer;
 
-            @include md {
-                display: block;
+                &:hover {
+                    opacity: .3;
+                    transition: opacity .3 ease-out;
+                }
+
+
+                @include md {
+                    display: none;
+                }
             }
         }
 
     }
 }
 
-            .openMenu {
-                right: 0 !important;
-                transition: all .3s ease-out;
-            }
+.openMenu {
+    right: 0 !important;
+    transition: all .3s ease-out;
+}
