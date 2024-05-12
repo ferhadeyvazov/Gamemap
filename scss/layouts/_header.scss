@@ -11,6 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 0 1rem;
 
         .nav_menu {
             @include md {
@@ -118,6 +119,32 @@
             }
         }
 
+        #search{
+            display: none;
+            @include md{
+                display: block;
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 14.63px;
+                border: solid 1.2px rgba(255, 255, 255, 0.5);
+                border-radius: 54px;
+                padding: .5rem 1.1rem;
+                background: none;
+                width: 50%;
+                max-width: 300px;
+                
+            }
+        }
+        .header_menu--btns{
+            display: none;
+            @include md{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0 1rem;
+            }
+        }
     }
 }
 
