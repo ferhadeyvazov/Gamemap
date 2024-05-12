@@ -60,6 +60,82 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.header .container .nav_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0px;
+  right: -100%;
+  width: 65%;
+  height: 100vh;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  transition: right 0.4s ease-in;
+}
+@media (min-width: 576px) {
+  .header .container .nav_menu {
+    display: none;
+  }
+}
+.header .container .nav_menu .header_menu {
+  padding: 0 1rem;
+}
+.header .container .nav_menu .header_menu .nav_link {
+  margin-bottom: 1.2rem;
+}
+.header .container .nav_menu .header_menu .nav_link a {
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+.header .container .nav_menu .header_menu .nav_link a:hover {
+  border-bottom: 3px solid #ff4656;
+  color: #ff4656;
+  transition: all 0.3s ease-out;
+}
+.header .container .nav_menu .header_menu--btns {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header .container .nav_menu .header_menu--btns button {
+  margin-bottom: 1.2rem;
+}
+.header .container .nav_menu .header_menu--btns button:hover {
+  background-color: #232323;
+}
+.header .container .nav_menu .header_menu--btns button a {
+  text-transform: capitalize !important;
+  color: #ffffff !important;
+}
+.header .container .nav_menu .header_menu--btns .signinBtn {
+  font-weight: 700;
+  border-radius: 54px;
+  background-color: #232323;
+  border: 2px solid #ff4656;
+}
+.header .container .nav_menu .header_menu--btns .signinBtn a {
+  color: #ffffff;
+  font-size: 14px;
+}
+.header .container .nav_menu .nav_close {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 6px;
+  right: 20px;
+}
+.header .container .nav_menu .nav_close:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2 ease-out;
+}
 .header .container #menuIcon {
   background: none;
   border: none;
@@ -77,84 +153,6 @@ nav {
 @media (min-width: 576px) {
   .header .container #menuIcon i {
     display: none;
-  }
-}
-.header .container .header_menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-  position: fixed;
-  top: 50px;
-  right: 0;
-  width: 65%;
-  height: 100vh;
-  padding: 2rem 0;
-  background-color: #ffffff;
-  border-radius: 5px 0 0 5px;
-  transition: right 0.4s ease-in;
-}
-@media (min-width: 576px) {
-  .header .container .header_menu {
-    display: none;
-  }
-}
-.header .container .header_menu--btns {
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-}
-.header .container .header_menu--btns button {
-  margin-bottom: 1.2rem;
-}
-.header .container .header_menu--btns button:hover {
-  background-color: #232323;
-}
-.header .container .header_menu--btns button a {
-  text-transform: capitalize !important;
-  color: #ffffff !important;
-}
-.header .container .header_menu--btns .signinBtn {
-  font-weight: 700;
-  border-radius: 54px;
-  background-color: #232323;
-  border: 2px solid #ff4656;
-}
-.header .container .header_menu--btns .signinBtn a {
-  color: #ffffff;
-  font-size: 14px;
-}
-@media (min-width: 576px) {
-  .header .container .header_menu {
-    position: sticky;
-    top: 0;
-  }
-}
-.header .container .header_menu .nav_link {
-  padding: 0 2rem;
-}
-.header .container .header_menu .nav_link a {
-  padding: 1rem 0;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.3);
-}
-.header .container .header_menu .nav_link a:hover {
-  border-bottom: 3px solid #ff4656;
-  color: #ff4656;
-  transition: all 0.3s ease-out;
-}
-.header .container .header_btns {
-  border: solid;
-}
-.header .container #search {
-  display: none;
-}
-@media (min-width: 576px) {
-  .header .container #search {
-    display: block;
   }
 }
 
@@ -222,7 +220,7 @@ nav {
   font-size: 14px;
 }
 
-.logo {
+.header_logo {
   max-width: 35%;
 }
 
