@@ -1,5 +1,5 @@
 @use '../helpers/variables' as *;
-@use '../helpers/colors' as *;
+
 
 // Normal and disable buttons
 @mixin btn($bgColor:$main_color, $textColor:$text_color, 

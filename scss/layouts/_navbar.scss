@@ -1,8 +1,40 @@
 @use '../helpers' as *;
 
-.nav{
+.nav {
     display: none;
-    @include md{
-        padding: 0.65rem 0;
+
+    @include md {
+        display: block;
+        position: fixed;
+        top: 150px;
+        left: 0;
+        width: 100%;
+
+        .container{
+            .header_menu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .nav_link{
+                    padding: 0 2rem;
+                    a{
+                        color: $nav_textColor;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: $fs-navlink;
+                        font-weight: 600;
+
+                        display: block;
+                        // padding: .5rem 0;
+                        &:hover{
+                            color: $main_color;
+                            border-bottom: 3px $main_color solid;
+                            outline-offset: -3px;
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
