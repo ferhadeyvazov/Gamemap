@@ -75,6 +75,7 @@ nav {
   position: absolute;
   top: 0px;
   right: -100%;
+  z-index: 10;
   width: 65%;
   height: 100vh;
   padding: 2rem 0;
@@ -224,8 +225,9 @@ nav {
     font-size: 13px;
     font-weight: 600;
     display: block;
+    padding: 0.5rem 0;
   }
-  .nav .container .header_menu .nav_link a:hover {
+  .nav .container .header_menu .nav_link a:hover, .nav .container .header_menu .nav_link a:nth-child(1) {
     color: #ff4656;
     border-bottom: 3px #ff4656 solid;
     outline-offset: -3px;
